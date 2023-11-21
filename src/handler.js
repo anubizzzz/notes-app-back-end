@@ -96,7 +96,7 @@ const editNoteByIdHandler = (request, h) => {
 };
 
 const deleteNoteByIdHandler = (request, h) => {
-  const {id} =request.params;
+  const { id } = request.params;
   const index = notes.findIndex((note) => note.id === id);
 
   if (index !== -1) {
@@ -115,6 +115,9 @@ const deleteNoteByIdHandler = (request, h) => {
   });
   response.code(404);
   return response;
-}
-
-module.exports = { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler, deleteNoteByIdHandler };
+};
+module.exports = { addNoteHandler,
+  getAllNotesHandler,
+  getNoteByIdHandler,
+  editNoteByIdHandler,
+  deleteNoteByIdHandler };
